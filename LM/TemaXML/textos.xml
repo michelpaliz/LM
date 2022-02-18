@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE textos [
+    <!ELEMENT textos (texto)+>
+    <!ELEMENT texto (#PCDATA)>
+    <!ENTITY escritor "Miguel de cervanates">
+    <!ENTITY obra "El Quijote">
+    <!ENTITY fecha "29/09/1547">
+]>
+<textos>
+    <texto>&obra; fues escrito por &escritor;.</texto>
+    <texto>&escritor; navio el &fecha;</texto>
+</textos>
