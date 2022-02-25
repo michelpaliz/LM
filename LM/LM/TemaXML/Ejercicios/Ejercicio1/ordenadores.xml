@@ -2,6 +2,7 @@
 <ordenadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ordenadores1.xsd">
     <!-- HOLA -->
     <!-- HOLA -->
+    <!-- HOLA -->
     <ordenador>
         <nombre>PC Gaming</nombre>
         <tipo>Sobremesa</tipo>
