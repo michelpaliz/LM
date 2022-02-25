@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ordenadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ordenadores1.xsd">
+    <!-- HOLA -->
+    <!-- HOLA -->
+    <ordenador>
+        <nombre>PC Gaming</nombre>
+        <tipo>Sobremesa</tipo>
+        <fabricacion>
+            <inicio>01/01/2022</inicio>
+            <fin>15/02/2022</fin>
+        </fabricacion>
+        <modificaciones>
+            <modificacion>Ampliación memoria RAM</modificacion>
+            <modificacion>Cambio placa base</modificacion>
+        </modificaciones>
+    </ordenador>
+</ordenadores>
