@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<persona nacimiento="10-12-1815"> 
+    <datos> 
+        <nombre>Ada</nombre> 
+        <apellidos>Lovelace</apellidos> 
+        <dni>12345678</dni> 
+    </datos> 
+    <comentario>Primer año en el IES</comentario> 
+</persona> 

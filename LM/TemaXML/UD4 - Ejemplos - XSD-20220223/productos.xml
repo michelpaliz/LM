@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="productos.xsd">
+    <producto>
+        <nombre>Teclado</nombre>
+        <codigo>C001</codigo>
+        <categoria>A</categoria>
+        <iva>21</iva>
+        <precio>15</precio>
+        <descuento>10</descuento>
+    </producto>
+    <producto>
+        <nombre>Monitor</nombre>
+        <codigo>C002</codigo>
+        <categoria>B</categoria>
+        <iva>21</iva>
+        <precio>147.2</precio>
+        <descuento>9</descuento>
+    </producto>
+</productos>
