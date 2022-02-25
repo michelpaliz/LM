@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE textos [
+    <!ELEMENT textos (texto)+>
+    <!ELEMENT texto (#PCDATA)>
+    <!ENTITY escritor SYSTEM "escritor.txt">
+]>
+<!-- no funciona -->
+<textos>
+    <texto>El quijote fue escrito por &escritor;</texto>
+</textos>
