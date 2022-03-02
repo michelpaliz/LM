@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--!ROOT = BIBLIOTECA, (LIBRO) -->
+    <xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <!--! LIBRO(TITULO,AUTOR,FECHA,ISBN,EDITOR,CATEGORIA,ENSTOCK,TRADUCTOR) -->
+                <xs:element name="libro" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="tNombre" />
+                            <xs:element name="autor" type="tNombre" maxOccurs="unbounded" />
+
+                            <!-- !FECHA(MES,ANYO) -->
+                            <xs:element name="fecha">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="mes" type="tMes" minOccurs="0" />
+                                        <xs:element name="anyo" type="tAnyo" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ISBN" type="tISBN" />
+                            <xs:element name="editor" type="tNombre" />
+                        </xs:sequence>
+                        <!-- atributo -->
+                        <xs:attribute name="categoria" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="autobiografia" />
+                                    <xs:enumeration value="noficcion" />
+                                    <xs:enumeration value="ficcion" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+
+                        <xs:attribute name="enstock" type="xs:boolean" default="false" />
+                        <xs:attribute name="traductor" type="xs:string" default="" />
+
+
+                    </xs:complexType>
+
+
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ======================================== -->
+    <!--  Definiciones de tipos simples           -->
+    <!-- ======================================== -->
+
+    <!-- ========= Tipo "tNombre" =============== -->
+    <xs:simpleType name="tNombre">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="0" />
+            <xs:maxLength value="100" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- =========== Tipo "tMes" =============== -->
+    <xs:simpleType name="tMes">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="12" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- =========== Tipo "tAnyo" ============== -->
+    <xs:simpleType name="tAnyo">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="2022" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- =========== Tipo "tISBN" ============== -->
+    <xs:simpleType name="tISBN">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="13" />
+            <xs:maxLength value="17" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
