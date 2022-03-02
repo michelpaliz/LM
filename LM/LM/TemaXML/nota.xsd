@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Elemento raiz -->
+    <xs:element name="nota">
+        <xs:complexType>
+
+            <xs:sequence>
+                <xs:element name="para" type="xs:string"></xs:element>
+                <xs:element name="de" type="xs:string"></xs:element>
+                <xs:element name="titulo" type="xs:string"></xs:element>
+                <xs:element name="Contenido" type="xs:string"></xs:element>
+                <xs:element name="dinero" type="xs:decimal"></xs:element>
+            </xs:sequence>
+
+        </xs:complexType>
+
+
+    </xs:element>
+    <!-- hola -->
+
+</xs:schema>
