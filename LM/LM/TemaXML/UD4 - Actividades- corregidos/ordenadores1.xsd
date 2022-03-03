@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="ordenadores">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="ordenador" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="nombre" type="xs:string"></xs:element>
-                            <xs:element name="tipo" ></xs:element>
+                            <xs:element name="nombre" type="xs:string" />
+                            <!-- Mismo ejemplo que ordenadores.xsd sin definición de tipo simple -->
+                            <xs:element name="tipo">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Sobremesa" />
+                                        <xs:enumeration value="Portátil" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
                             <xs:element name="fabricacion">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="inicio" type="xs:string"></xs:element>
-                                        <xs:element name="fin" type="xs:string"></xs:element>
+                                        <xs:element name="inicio" type="xs:date" />
+                                        <xs:element name="fin" type="xs:date" />
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="modificaciones">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="modificacion" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                        <xs:element name="modificacion" maxOccurs="unbounded" type="xs:string" />
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>

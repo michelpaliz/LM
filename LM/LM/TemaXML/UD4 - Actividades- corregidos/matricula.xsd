@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="matricula" type="tMatricula" />
+    <!-- !ROOT = MATRICULA, (PERSONAL,PAGO) -->
+    <xs:complexType name="tMatricula">
+        <xs:sequence>
+            <xs:element name="personal" type="tPersonal" />
+            <xs:element name="pago" type="tPago" />
+        </xs:sequence>
+    </xs:complexType>
+    <!--!PERSONA (DNI,NOMBRE,TITULACION,CURSO,DOMICILIOS)-->
+    <xs:complexType name="tPersonal">
+        <xs:sequence>
+            <!--  El elemento “dni” tendrá una longitud de 9 caracteres.  -->
+            <xs:element name="dni">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:length value="9" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <!-- OTROS ELEMENTOS-->
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="titulacion" type="xs:string" />
+            <xs:element name="curso_academico" type="xs:string" />
+            <xs:element name="domicilios">
+                <xs:complexType>
+                    <xs:sequence>
+                        <!--  El elemento “domicilio” debe aparecer mínimo una vez y máximo dos veces. -->
+                        <xs:element name="domicilio" maxOccurs="2">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="nombre" type="xs:string" />
+                                </xs:sequence>
+                                <xs:attribute name="tipo" use="required" />
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--! PAGO (TIPO_MATRICULA) -->
+    <xs:complexType name="tPago">
+        <xs:sequence>
+            <xs:element name="tipo_matricula" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

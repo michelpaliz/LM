@@ -7,7 +7,6 @@
                 <xs:element name="de" type="xs:string" />
                 <xs:element name="titulo" type="xs:string" />
                 <xs:element name="contenido" type="xs:string" />
-                <xs:element name="dinero" type="xs:decimal" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
