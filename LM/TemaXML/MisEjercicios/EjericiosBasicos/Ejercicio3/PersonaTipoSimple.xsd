@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Persona (datos, comentario)  -->
+    <!-- datos(nombre,apellidos,dni) -->
+
+    <!-- tiposComplejos = Persona, datos -->
+
+
+    <!-- Tipo complejo -->
+    <xsd:element name="persona" type="tipoPersona" />
+    <!-- tipo simple -->
+    <xsd:element name="comentario" type="xsd:string" />
+
+
+    <!-- body- tipo complejo de Persona-->
+    <!-- Los elementos de persona son de este tipo tipo (tipoPersona) 
+        y los elementos datos son de ese tipo (datos) -->
+    <xsd:complexType name="tipoPersona">
+        <xsd:sequence>
+            <xsd:element name="datos" type="info" />
+            <xsd:element ref="comentario" minOccurs="0" />
+        </xsd:sequence>
+        <xsd:attribute name="nacimiento" type="xsd:date" />
+    </xsd:complexType>
+
+
+    <!-- Estos son los elementos de datos -->
+    <xsd:complexType name="info">
+        <xsd:sequence>
+            <xsd:element name="nombre" type="xsd:string" />
+            <xsd:element name="apellidos" type="xsd:string" />
+            <xsd:element name="dni" type="xsd:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>
