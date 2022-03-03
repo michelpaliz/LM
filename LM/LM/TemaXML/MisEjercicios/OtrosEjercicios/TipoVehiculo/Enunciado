@@ -1,0 +1,3 @@
+¿De qué otro modo se puede definir el elemento "vehículo" y un xs:simleType llamado tipoDeVehiculo que restringiese a
+ "barco", "bicicleta", "coche" y "tren" como los únicos valores aceptables para el vehículo,
+ de forma que dicho tipo pudiera ser también utilizado por otros elementos?

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Libro SYSTEM "Libro.dtd">
+<libro categoria = "ficcion">
+    <titulo></titulo>
+    <autor></autor>
+    <fecha></fecha>
+    <ISBN></ISBN>
+    <editor></editor>
+
+
+
+</libro>

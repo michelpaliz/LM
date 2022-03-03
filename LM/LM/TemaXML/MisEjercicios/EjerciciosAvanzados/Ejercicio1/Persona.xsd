@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="alumno">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="persona"/>
+                <xs:element name="datos"/>
+                
+            </xs:sequence>
+            <xs:attribute name="nacimientoo" />
+        </xs:complexType>
+        
+    </xs:element>
+</xs:schema>

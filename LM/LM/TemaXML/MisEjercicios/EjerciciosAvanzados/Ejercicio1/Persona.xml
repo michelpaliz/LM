@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- <alumno xmlns:xsi="http:/>>>/www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="Persona.xsd"  -->
+
+<!-- !ROOT = ALUMNO (PERSONA,DATOS_ACADEMICOS) -->
+<alumno xmlns:xsi="http://www.w3c.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.prueba.es/Persona XMLSchemaAvanzados01_Persona.xsd
+ http://www.prueba.es/docencia XMLSchemaAvanzados01_docencia.xsd" xmlns:per="http://www.prueba.es/persona" xmlns:doc="http://www.prueba.es/docencia">
+
+    <!-- !PERSONA (DATOS) -->
+    <per:persona per:nacimiento="1999-10-20">
+        <!--! DATOS(NOMBRE,APELLIDOS,DNI) -->
+        <per:datos>
+            <per:nombre>Pepe</per:nombre>
+            <per:apellidos>Garcia</per:apellidos>
+            <per:dni>25390952X</per:dni>
+        </per:datos>
+        <per:comentario>repetidor</per:comentario>
+    </per:persona>
+
+    <!--! DATOS ACADEMICOS (CURSO,ASIGNATURA) -->
+    <datos_academicos>
+        <doc:curso>1ASIR</doc:curso>
+        <!-- !ASIGNATURA (NOMBRE,HORAS,PROFESOR) -->
+        <doc:asignatura>
+            <doc:nombre>Lenguajes de Marcas</doc:nombre>
+            <doc:horas>4</doc:horas>
+            <doc:profesor>Juan Moreno</doc:profesor>
+        </doc:asignatura>
+        <doc:asignatura>
+            <doc:nombre>Fundamentos del Hardware</doc:nombre>
+            <doc:horas>3</doc:horas>
+            <doc:profesor>Virginia López</doc:profesor>
+        </doc:asignatura>
+    </datos_academicos>
+
+
+</alumno>
