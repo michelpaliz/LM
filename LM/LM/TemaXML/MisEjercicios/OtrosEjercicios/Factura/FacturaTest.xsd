@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--! ROOT = FACTURA (datosEmisor,datosClientes,detalleFactura) -->
+    <xs:element name="factura">
+        <xs:complexType>
+            <!-- <xs:all></xs:all> -->
+            <!-- <xs:sequence>  -->
+            <!-- all  = espicifica que pueden aparecer en any order -->
+            <xs:all>
+                <xs:element name="datosEmisor">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:group ref="datosEmpresa" />
+                            <!-- <xs:element name="nombre" type="xs:string" />
+                            <xs:element name="cif" type="xs:string" />
+                            <xs:element name="telefono" type="xs:string" /> -->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="datosClientes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:group ref="datosEmpresa"></xs:group>
+                            <!-- <xs:element name="nombre" type="xs:string" />
+                            <xs:element name="cif" type="xs:string" />
+                            <xs:element name="telefono" type="xs:string" /> -->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="detalle-factura">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="línea" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:group ref="datosLinea"></xs:group>
+                                        <!-- <xs:element name="descripción" type="xs:string" />
+                                        <xs:element name="cantidad" type="xs:string" />
+                                        <xs:element name="oferta" minOccurs="0" />
+                                        <xs:element name="pvp" type="xs:string" /> -->
+                                    </xs:sequence>
+                                    <xs:attributeGroup ref="atributosLinea"></xs:attributeGroup>
+                                    <!-- <xs:attribute name="código-artículo" use="required" />
+                                    <xs:attribute name="tipo" use="required" /> -->
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="importe" type="TipoPrecio" use="required" />
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- </xs:sequence> -->
+            </xs:all>
+            <xs:attributeGroup ref="atributosFactura" />
+        </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>
