@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="alquileres">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="alquiler">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="datosConductor" type="TipoConductor"></xs:element>
+
+                            <xs:element name="cocheAlquilado">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="marca" type="xs:string" />
+                                        <xs:element name="modelo" type="xs:string" />
+                                        <xs:element name="matricuala" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="conductorID" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="facturacionAlquiler">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="fechaInicio" type="xs:date" />
+                                        <xs:element name="fechaFin" type="xs:date" />
+                                        <xs:element name="precioBase" type="xs:double" />
+                                        <xs:element name="IVA" type="xs:double" />
+                                        <xs:element name="formaPago" type="formaPago" />
+                                        <xs:element name="totalAdeudado" type="xs:decimal" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="accidentes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="fecha" type="xs:string" />
+                                        <xs:element name="descripcion" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+
+                        <xs:attribute name="id" type="xs:integer" use="required" />
+                        <xs:attribute name="estado" use="required" />
+
+
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Tipos Complejos -->
+
+    <xs:complexType name="TipoConductor">
+        <xs:sequence>
+            <xs:element name="nombre" type="TextoCorto" />
+            <xs:element name="primerApellido" type="TextoCorto" />
+            <xs:element name="segundoApellido" type="TextoCorto" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:decimal" use="required" />
+    </xs:complexType>
+
+
+    <!-- Tipos Simples -->
+
+    <xs:simpleType name="TextoCorto">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="30" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="alquilerID">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="5" />
+            <xs:maxLength value="5" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="conductorID">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="\c+" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="formaPago">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Efectivo"></xs:enumeration>
+            <xs:enumeration value="Tarjeta"></xs:enumeration>
+            <xs:enumeration value="Transferencia"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+</xs:schema>
