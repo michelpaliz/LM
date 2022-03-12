@@ -1,0 +1,21 @@
+<!ELEMENT torneo (jueces,jugadores,partidos)>
+<!ATTLIST torneo nombre CDATA #REQUIRED>
+<!ATTLIST torneo anyo NMTOKEN #REQUIRED>
+<!ATTLIST torneo modalidad CDATA #REQUIRED>
+<!ELEMENT jueces (juez+)>
+<!ELEMENT juez (#PCDATA)>
+<!ATTLIST juez codigo NMTOKEN #REQUIRED>
+<!ATTLIST juez nacionalidad NMTOKEN #REQUIRED>
+<!ELEMENT jugadores (jugador+)>
+<!ELEMENT jugador (#PCDATA)>
+<!ATTLIST jugador codigo NMTOKEN #REQUIRED>
+<!ELEMENT partidos (partido+)>
+<!ELEMENT partido (resultado)>
+<!ATTLIST partido ronda NMTOKEN #REQUIRED>
+<!ATTLIST partido fecha CDATA #REQUIRED>
+<!ATTLIST partido jugadores CDATA #REQUIRED>
+<!ATTLIST partido juez NMTOKEN #REQUIRED>
+<!ELEMENT resultado (set+)>
+<!ELEMENT set (#PCDATA)>
+<!ATTLIST set numero NMTOKEN #REQUIRED>
+<!ATTLIST set tiebreak NMTOKEN #IMPLIED>

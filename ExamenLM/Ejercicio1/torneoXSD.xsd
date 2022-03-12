@@ -1,0 +1,85 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="torneo">
+        <xs:complexType>
+            <!-- !ROOT = TORNEO(JUECES, JUGADORES,PARTIDO) -->
+            <xs:sequence>
+                <xs:element name="jueces">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="juez" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="codigo" use="required" />
+                                            <xs:attribute name="nacionalidad" use="required" />
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="jugadores">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="jugador" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="codigo" use="required" />
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="partidos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="partido" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="resultado">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="set" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute name="numero" type="xs:integer" use="required" />
+                                                                    <xs:attribute name="tiebreak" />
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="ronda" use="required" />
+                                    <xs:attribute name="fecha" use="required" />
+                                    <xs:attribute name="jugadores" use="required" />
+                                    <xs:attribute name="juez" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="nombre" use="required" />
+            <xs:attribute name="anyo" type="xs:integer" use="required" />
+            <xs:attribute name="modalidad" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="partido">
+        <xs:sequence>
+            <xs:element name="cuartos_de_final" type="xs:string" />
+            <xs:element name="Semifinales" type="xs:string" />
+            <xs:element name="Final" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>

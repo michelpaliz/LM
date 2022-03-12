@@ -1,6 +1,0 @@
-Escribir un XML Schema para el siguiente documento XML, e incluir los cambios necesarios en el mismo para referenciar al esquema creado. Se debe cumplir también lo siguiente: 
-Todos los elementos que aparecen en el documento instancia de abajo son obligatorios y deben aparecer siempre en el mismo orden. 
-Se deben definir dos tipos de datos, “tipoPersona” (los elementos “persona” son de este tipo) “info” (los elementos “datos” son de este tipo). 
-El atributo “nacimiento” es de tipo “date”. 
-El elemento “comentario” no es obligatorio; si aparece lo hace sólo 1 vez. 
-

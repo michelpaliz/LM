@@ -1,0 +1,13 @@
+<!ELEMENT curso (alumnos?, profesores?)>
+<!ELEMENT alumnos (alumno)+>
+<!ELEMENT alumno (nombre, apellido+, metodoIngreso, evaluacion?)>
+<!ATTLIST alumno repetidor (true | false) "false">
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT metodoIngreso (#PCDATA)>
+<!ELEMENT evaluacion EMPTY>
+<!ATTLIST evaluacion nota NMTOKEN #REQUIRED>
+<!ELEMENT profesores (profesor)+>
+<!ELEMENT profesor (nombre, apellido+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>

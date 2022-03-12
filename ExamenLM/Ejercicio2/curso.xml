@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curso>
+
+    <alumnos>
+        <primerAlumno>
+            <nombre>Ada</nombre>
+            <apellido></apellido>
+            <metodoIngreso>Bachillerato</metodoIngreso>
+            <nota>9.75</nota>
+            <repetidor>no</repetidor>
+        </primerAlumno>
+
+        <segundoAlumno>
+            <nombre>Angela</nombre>
+            <apellido>Robles</apellido>
+            <metodoIngreso>CFGM</metodoIngreso>
+            <nota>5</nota>
+            <repetidor>Si</repetidor>
+        </segundoAlumno>
+
+    </alumnos>
+
+    <profesores>
+        <nombre>Ruben</nombre>
+        <apellido>Parra</apellido>
+        <apellido2>Savall</apellido2>
+
+    </profesores>
+
+
+</curso>

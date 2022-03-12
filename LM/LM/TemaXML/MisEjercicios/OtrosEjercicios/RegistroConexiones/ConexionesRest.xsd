@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="registro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="usuario">
+                    <xs:complexType>
+                        <xs:sequence> 
+                            <!-- grupo -->
+                            <xs:element name="apellidos-y-nombre" type="xs:string" />
+                            <xs:element name="email" type="xs:string" />
+                            <xs:element name="conexiones">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="conexión">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:unsignedShort">
+                                                        <xs:attribute name="fecha" type="xs:date" use="required" />
+                                                        <xs:attribute name="hora" type="xs:time" use="required" />
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="identificador" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="empleado">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="apellidos-y-nombre" type="xs:string" />
+                            <xs:element name="email" type="xs:string" />
+                            <xs:element name="conexiones" />
+                            <xs:element name="departamento">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="marketing" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="identificador" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+</xs:schema>

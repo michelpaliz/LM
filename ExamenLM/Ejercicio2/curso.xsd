@@ -1,0 +1,71 @@
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+
+    <xsd:element name='curso'>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref='alumnos' minOccurs='0' maxOccurs='1' />
+                <xsd:element ref='profesores' minOccurs='0' maxOccurs='1' />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name='alumnos'>
+        <xsd:complexType>
+            <xsd:sequence maxOccurs='unbounded'>
+                <xsd:element ref='alumno' />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name='alumno'>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref='nombre' />
+                <xsd:element ref='apellido' maxOccurs='unbounded' />
+                <xsd:element ref='metodoIngreso' />
+                <xsd:element ref='evaluacion' minOccurs='0' maxOccurs='1' />
+            </xsd:sequence>
+            <xsd:attribute name='repetidor' default='false'>
+                <xsd:simpleType>
+                    <xsd:restriction base='xsd:string'>
+                        <xsd:enumeration value='true' />
+                        <xsd:enumeration value='false' />
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name='nombre' type='xsd:string'></xsd:element>
+
+    <xsd:element name='apellido' type='xsd:string'></xsd:element>
+
+    <xsd:element name='metodoIngreso' type='xsd:string'></xsd:element>
+
+    <xsd:element name='evaluacion'>
+        <xsd:complexType>
+            <xsd:attribute name='nota' type='xsd:NMTOKEN' use='required' />
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name='profesores'>
+        <xsd:complexType>
+            <xsd:sequence maxOccurs='unbounded'>
+                <xsd:element ref='profesor' />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name='profesor'>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref='nombre' />
+                <xsd:element ref='apellido' maxOccurs='unbounded' />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- <xsd:element name='nombre' type='xsd:string'></xsd:element>
+
+    <xsd:element name='apellido' type='xsd:string'></xsd:element> -->
+</xsd:schema>

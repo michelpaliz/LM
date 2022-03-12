@@ -1,0 +1,77 @@
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="torneo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="jueces" />
+        <xs:element ref="jugadores" />
+        <xs:element ref="partidos" />
+      </xs:sequence>
+      <xs:attribute name="anyo" use="required" type="xs:integer" />
+      <xs:attribute name="modalidad" use="required" />
+      <xs:attribute name="nombre" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="jueces">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="juez" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="juez">
+    <xs:complexType mixed="true">
+      <xs:attribute name="codigo" use="required" type="xs:NCName" />
+      <xs:attribute name="nacionalidad" use="required" type="xs:NCName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="jugadores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="jugador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="jugador">
+    <xs:complexType mixed="true">
+      <xs:attribute name="codigo" use="required" type="xs:NCName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="partidos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="partido" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="partido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="resultado" />
+      </xs:sequence>
+      <xs:attribute name="fecha" use="required" />
+      <xs:attribute name="juez" use="required" type="xs:NCName" />
+      <xs:attribute name="jugadores" use="required" />
+      <xs:attribute name="ronda" use="required" type="xs:NCName" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="resultado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="set" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:element name="set">
+    <xs:complexType mixed="true">
+      <xs:attribute name="numero" use="required" type="xs:integer" />
+      <xs:attribute name="tiebreak" type="xs:NCName" />
+    </xs:complexType>
+  </xs:element>
+
+
+</xs:schema>
