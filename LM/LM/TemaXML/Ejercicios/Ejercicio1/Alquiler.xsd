@@ -3,11 +3,11 @@
     <xs:element name="alquileres">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="alquiler">
+                <xs:element name="alquiler" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
 
-                            <xs:element name="datosConductor" type="TipoConductor"></xs:element>
+                            <xs:element name="datosConductor" type="TipoConductor" maxOccurs="2"></xs:element>
 
                             <xs:element name="cocheAlquilado">
                                 <xs:complexType>
@@ -16,7 +16,7 @@
                                         <xs:element name="modelo" type="xs:string" />
                                         <xs:element name="matricula" type="matricula" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="conductorID" use="required" />
+                                    <xs:attribute name="datosCoche" type="cocheAlquilerID" use="required" />
                                 </xs:complexType>
                             </xs:element>
 
@@ -26,7 +26,7 @@
                                         <xs:element name="fechaInicio" type="xs:date" />
                                         <xs:element name="fechaFin" type="xs:date" />
                                         <xs:element name="precioBase" type="xs:decimal" />
-                                        <xs:element name="IVA" type="xs:decimal" />
+                                        <xs:element name="IVA" type="iva" />
                                         <xs:element name="formaPago" type="formaPago" />
                                         <xs:element name="totalAdeudado" type="xs:decimal" />
                                     </xs:sequence>
@@ -44,8 +44,8 @@
 
                         </xs:sequence>
 
-                        <xs:attribute name="id" type="xs:integer" use="required" />
-                        <xs:attribute name="estado" use="required" />
+                        <xs:attribute name="datosAlquiler" type="alquilerID" use="required" />
+                        <xs:attribute name="estado" type="estado" use="optional" default="no finalizado" />
 
 
                     </xs:complexType>
@@ -62,7 +62,7 @@
             <xs:element name="primerApellido" type="TextoCorto" />
             <xs:element name="segundoApellido" type="TextoCorto" />
         </xs:sequence>
-        <xs:attribute name="id" type="xs:decimal" use="required" />
+        <xs:attribute name="datosConductor" type="conductorID" use="required" />
     </xs:complexType>
 
 
@@ -84,7 +84,7 @@
 
     <xs:simpleType name="conductorID">
         <xs:restriction base="xs:token">
-            <xs:pattern value="\c+" />
+            <xs:pattern value="[0-9]{8}[A-Z]{1}" />
         </xs:restriction>
     </xs:simpleType>
 
@@ -96,15 +96,36 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="cocheAlquilerID">
+        <xs:restriction base="xs:decimal">
+            <xs:pattern value="[1-9]{5}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+
     <xs:simpleType name="decimal">
         <xs:restriction base="xs:decimal">
             <xs:fractionDigits value="2"></xs:fractionDigits>
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="iva">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.21"></xs:minInclusive>
+            <xs:maxInclusive value="0.21"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="matricula">
         <xs:restriction base="xs:token">
             <xs:pattern value="[1-9]{2}[A-Z]{2}[1-9]{2}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="estado">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="finalizado"></xs:enumeration>
+            <xs:enumeration value="no finalizado"></xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
 

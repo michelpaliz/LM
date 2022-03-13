@@ -3,14 +3,73 @@
 
 <alquileres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Alquiler.xsd">
 
-    <alquiler id="1111555" estado="finalizado">
-        <datosConductor id="53944920">
+    <alquiler datosAlquiler="11115" estado="finalizado">
+        <datosConductor datosConductor="53944920F">
             <nombre>Michael</nombre>
             <primerApellido>Paliz</primerApellido>
             <segundoApellido>Morales</segundoApellido>
         </datosConductor>
 
-        <cocheAlquilado id="22222">
+        <cocheAlquilado datosCoche="22222">
+            <marca>Citroen</marca>
+            <modelo>Berlingo</modelo>
+            <matricula>55JK55</matricula>
+        </cocheAlquilado>
+
+        <facturacionAlquiler>
+            <fechaInicio>2022-06-22</fechaInicio>
+            <fechaFin>2022-09-22</fechaFin>
+            <precioBase>500</precioBase>
+            <IVA>0.21</IVA>
+            <formaPago>Efectivo</formaPago>
+            <totalAdeudado>605</totalAdeudado>
+        </facturacionAlquiler>
+
+        <accidentes>
+            <fecha>20-07-2022</fecha>
+            <descripcion>Accidente frontal con otro vehiculo</descripcion>
+        </accidentes>
+
+
+    </alquiler>
+
+    <alquiler datosAlquiler="11116" estado="finalizado">
+        <datosConductor datosConductor="53944920F">
+            <nombre>Michael</nombre>
+            <primerApellido>Paliz</primerApellido>
+            <segundoApellido>Morales</segundoApellido>
+        </datosConductor>
+
+        <cocheAlquilado datosCoche="22222">
+            <marca>Citroen</marca>
+            <modelo>Berlingo</modelo>
+            <matricula>55JK55</matricula>
+        </cocheAlquilado>
+
+        <facturacionAlquiler>
+            <fechaInicio>2022-06-22</fechaInicio>
+            <fechaFin>2022-09-22</fechaFin>
+            <precioBase>500</precioBase>
+            <IVA>0.21</IVA>
+            <formaPago>Efectivo</formaPago>
+            <totalAdeudado>605</totalAdeudado>
+        </facturacionAlquiler>
+
+        <accidentes>
+            <fecha>20-07-2022</fecha>
+            <descripcion>Accidente frontal con otro vehiculo</descripcion>
+        </accidentes>
+
+
+    </alquiler>
+    <alquiler datosAlquiler="11117" estado="finalizado">
+        <datosConductor datosConductor="53944920F">
+            <nombre>Michael</nombre>
+            <primerApellido>Paliz</primerApellido>
+            <segundoApellido>Morales</segundoApellido>
+        </datosConductor>
+
+        <cocheAlquilado datosCoche="22222">
             <marca>Citroen</marca>
             <modelo>Berlingo</modelo>
             <matricula>55JK55</matricula>
