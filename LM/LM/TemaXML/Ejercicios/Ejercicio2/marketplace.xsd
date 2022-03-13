@@ -8,8 +8,7 @@
                         <xs:sequence>
                             <xs:element name="razonSocial" type="razonSocial" />
                             <xs:element name="CIF" type="cif" />
-                            <xs:element name="telefono1" type="xs:string" />
-                            <xs:element name="telefono2" maxOccurs="unbounded"></xs:element>
+                            <xs:element name="telefono" type="telefono" minOccurs="1" maxOccurs="2" />
                             <xs:element name="datosDomicilio">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -27,8 +26,7 @@
                                         <xs:element name="nombre" type="textoCorto" />
                                         <xs:element name="apellidos" type="textoCorto" />
                                         <xs:element name="DNI" type="dni" />
-                                        <xs:element name="telefono1" type="textoCorto" />
-                                        <xs:element name="telefono2" maxOccurs="unbounded" />
+                                        <xs:element name="telefono" type="telefono" minOccurs="1" maxOccurs="2" />
                                         <xs:element name="datosFacturacion">
                                             <xs:complexType>
                                                 <xs:sequence>
@@ -121,6 +119,12 @@
             <xs:minInclusive value="2022-01-01" />
             <xs:maxInclusive value="2022-12-31" />
             <xs:pattern value=".{10}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="telefono">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="[0-9]{9}"></xs:pattern>
         </xs:restriction>
     </xs:simpleType>
 

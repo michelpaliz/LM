@@ -5,8 +5,7 @@
     <empresa id="11111">
         <razonSocial>Sociedad Limitada</razonSocial>
         <CIF>B16841652</CIF>
-        <telefono1>654681542</telefono1>
-        <telefono2></telefono2>
+        <telefono>654681542</telefono>
         <datosDomicilio>
             <direccion>Calle Senija</direccion>
             <poblacion>Denia</poblacion>
@@ -18,8 +17,7 @@
             <nombre>Michael</nombre>
             <apellidos>Paliz</apellidos>
             <DNI>53944920F</DNI>
-            <telefono1>654681542</telefono1>
-            <telefono2></telefono2>
+            <telefono>654681542</telefono>
             <datosFacturacion>
                 <direccion>Calle campos</direccion>
                 <poblacion>Denia</poblacion>
@@ -40,8 +38,7 @@
             <nombre>Michael</nombre>
             <apellidos>Paliz</apellidos>
             <DNI>53944920F</DNI>
-            <telefono1>654681542</telefono1>
-            <telefono2></telefono2>
+            <telefono>654681542</telefono>
             <datosFacturacion>
                 <direccion>Calle campos</direccion>
                 <poblacion>Denia</poblacion>
@@ -57,7 +54,6 @@
 
 
         </cliente>
-
 
     </empresa>
 
@@ -65,8 +61,7 @@
     <empresa id="11111">
         <razonSocial>Sociedad Limitada</razonSocial>
         <CIF>B16841652</CIF>
-        <telefono1>654681542</telefono1>
-        <telefono2></telefono2>
+        <telefono>654681542</telefono>
         <datosDomicilio>
             <direccion>Calle Senija</direccion>
             <poblacion>Denia</poblacion>
@@ -78,8 +73,7 @@
             <nombre>Michael</nombre>
             <apellidos>Paliz</apellidos>
             <DNI>53944920F</DNI>
-            <telefono1>654681542</telefono1>
-            <telefono2></telefono2>
+            <telefono>654681542</telefono>
             <datosFacturacion>
                 <direccion>Calle campos</direccion>
                 <poblacion>Denia</poblacion>
@@ -110,8 +104,7 @@
             <nombre>Michael</nombre>
             <apellidos>Paliz</apellidos>
             <DNI>53944920F</DNI>
-            <telefono1>654681542</telefono1>
-            <telefono2></telefono2>
+            <telefono>654681542</telefono>
             <datosFacturacion>
                 <direccion>Calle campos</direccion>
                 <poblacion>Denia</poblacion>

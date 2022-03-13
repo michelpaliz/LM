@@ -7,7 +7,7 @@
                     <xs:complexType>
                         <xs:sequence>
 
-                            <xs:element name="datosConductor" type="TipoConductor" maxOccurs="2"></xs:element>
+                            <xs:element name="datosConductor" type="TipoConductor" minOccurs="1" maxOccurs="2"></xs:element>
 
                             <xs:element name="cocheAlquilado">
                                 <xs:complexType>
