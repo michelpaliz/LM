@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<marketplace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="marketplace.xsd">
+
+    <empresa id="11111">
+        <razonSocial>Sociedad Limitada</razonSocial>
+        <CIF>B16841652</CIF>
+        <telefono1>654681542</telefono1>
+        <telefono2></telefono2>
+        <datosDomicilio>
+            <direccion>Calle Senija</direccion>
+            <poblacion>Denia</poblacion>
+            <provincia>Alicante</provincia>
+            <pais>España</pais>
+            <codigoPostal>03700</codigoPostal>
+        </datosDomicilio>
+        <cliente clienteID="11111">
+            <nombre>Michael</nombre>
+            <apellidos>Paliz</apellidos>
+            <DNI>53944920F</DNI>
+            <telefono1>654681542</telefono1>
+            <telefono2></telefono2>
+            <datosFacturacion>
+                <direccion>Calle campos</direccion>
+                <poblacion>Denia</poblacion>
+                <provincia>Alicante</provincia>
+                <pais>España</pais>
+                <codigoPostal>03700</codigoPostal>
+            </datosFacturacion>
+            <pedido idPedido="11111" estado="En proceso">
+                <fecha>2022-06-02</fecha>
+                <descripcion>Zapatos nike</descripcion>
+                <datosDomicilioEnvio>Calle campos</datosDomicilioEnvio>
+            </pedido>
+
+
+        </cliente>
+
+        <cliente clienteID="11111">
+            <nombre>Michael</nombre>
+            <apellidos>Paliz</apellidos>
+            <DNI>53944920F</DNI>
+            <telefono1>654681542</telefono1>
+            <telefono2></telefono2>
+            <datosFacturacion>
+                <direccion>Calle campos</direccion>
+                <poblacion>Denia</poblacion>
+                <provincia>Alicante</provincia>
+                <pais>España</pais>
+                <codigoPostal>03700</codigoPostal>
+            </datosFacturacion>
+            <pedido idPedido="11111" estado="En proceso">
+                <fecha>2022-06-02</fecha>
+                <descripcion>Zapatos nike</descripcion>
+                <datosDomicilioEnvio>Calle campos</datosDomicilioEnvio>
+            </pedido>
+
+
+        </cliente>
+
+
+    </empresa>
+
+
+    <empresa id="11111">
+        <razonSocial>Sociedad Limitada</razonSocial>
+        <CIF>B16841652</CIF>
+        <telefono1>654681542</telefono1>
+        <telefono2></telefono2>
+        <datosDomicilio>
+            <direccion>Calle Senija</direccion>
+            <poblacion>Denia</poblacion>
+            <provincia>Alicante</provincia>
+            <pais>España</pais>
+            <codigoPostal>03700</codigoPostal>
+        </datosDomicilio>
+        <cliente clienteID="11111">
+            <nombre>Michael</nombre>
+            <apellidos>Paliz</apellidos>
+            <DNI>53944920F</DNI>
+            <telefono1>654681542</telefono1>
+            <telefono2></telefono2>
+            <datosFacturacion>
+                <direccion>Calle campos</direccion>
+                <poblacion>Denia</poblacion>
+                <provincia>Alicante</provincia>
+                <pais>España</pais>
+                <codigoPostal>03700</codigoPostal>
+            </datosFacturacion>
+            <pedido idPedido="11111" estado="En proceso">
+                <fecha>2022-06-02</fecha>
+                <descripcion>Zapatos nike</descripcion>
+                <datosDomicilioEnvio>Calle campos</datosDomicilioEnvio>
+            </pedido>
+            <pedido idPedido="11111" estado="En proceso">
+                <fecha>2022-06-02</fecha>
+                <descripcion>Zapatos nike</descripcion>
+                <datosDomicilioEnvio>Calle campos</datosDomicilioEnvio>
+            </pedido>
+            <pedido idPedido="11111" estado="En proceso">
+                <fecha>2022-06-02</fecha>
+                <descripcion>Zapatos nike</descripcion>
+                <datosDomicilioEnvio>Calle campos</datosDomicilioEnvio>
+            </pedido>
+
+
+        </cliente>
+
+        <cliente clienteID="11111">
+            <nombre>Michael</nombre>
+            <apellidos>Paliz</apellidos>
+            <DNI>53944920F</DNI>
+            <telefono1>654681542</telefono1>
+            <telefono2></telefono2>
+            <datosFacturacion>
+                <direccion>Calle campos</direccion>
+                <poblacion>Denia</poblacion>
+                <provincia>Alicante</provincia>
+                <pais>España</pais>
+                <codigoPostal>03700</codigoPostal>
+            </datosFacturacion>
+            <pedido idPedido="11111" estado="En proceso">
+                <fecha>2022-06-02</fecha>
+                <descripcion>Zapatos nike</descripcion>
+                <datosDomicilioEnvio>Calle campos</datosDomicilioEnvio>
+            </pedido>
+
+
+        </cliente>
+
+
+    </empresa>
+
+</marketplace>

@@ -9,6 +9,13 @@
             <primerApellido>Paliz</primerApellido>
             <segundoApellido>Morales</segundoApellido>
         </datosConductor>
+        
+
+        <datosConductor datosConductor="53944920F">
+            <nombre>Michael</nombre>
+            <primerApellido>Paliz</primerApellido>
+            <segundoApellido>Morales</segundoApellido>
+        </datosConductor>
 
         <cocheAlquilado datosCoche="22222">
             <marca>Citroen</marca>
@@ -26,7 +33,7 @@
         </facturacionAlquiler>
 
         <accidentes>
-            <fecha>20-07-2022</fecha>
+            <fecha>2022-02-20</fecha>
             <descripcion>Accidente frontal con otro vehiculo</descripcion>
         </accidentes>
 
@@ -56,7 +63,7 @@
         </facturacionAlquiler>
 
         <accidentes>
-            <fecha>20-07-2022</fecha>
+            <fecha>2022-02-03</fecha>
             <descripcion>Accidente frontal con otro vehiculo</descripcion>
         </accidentes>
 
@@ -85,7 +92,7 @@
         </facturacionAlquiler>
 
         <accidentes>
-            <fecha>20-07-2022</fecha>
+            <fecha>2022-06-20</fecha>
             <descripcion>Accidente frontal con otro vehiculo</descripcion>
         </accidentes>
 

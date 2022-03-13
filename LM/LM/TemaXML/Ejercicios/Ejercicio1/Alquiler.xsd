@@ -23,8 +23,8 @@
                             <xs:element name="facturacionAlquiler">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="fechaInicio" type="xs:date" />
-                                        <xs:element name="fechaFin" type="xs:date" />
+                                        <xs:element name="fechaInicio" type="fecha" />
+                                        <xs:element name="fechaFin" type="fecha" />
                                         <xs:element name="precioBase" type="xs:decimal" />
                                         <xs:element name="IVA" type="iva" />
                                         <xs:element name="formaPago" type="formaPago" />
@@ -33,10 +33,10 @@
                                 </xs:complexType>
                             </xs:element>
 
-                            <xs:element name="accidentes">
+                            <xs:element name="accidentes" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="fecha" type="xs:string" />
+                                        <xs:element name="fecha" type="fecha" />
                                         <xs:element name="descripcion" type="xs:string" />
                                     </xs:sequence>
                                 </xs:complexType>
@@ -129,5 +129,12 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="fecha">
+        <xs:restriction base="xs:date">
+            <xs:minInclusive value="2022-01-01" />
+            <xs:maxInclusive value="2022-12-31" />
+            <xs:pattern value=".{10}" />
+        </xs:restriction>
+    </xs:simpleType>
 
 </xs:schema>

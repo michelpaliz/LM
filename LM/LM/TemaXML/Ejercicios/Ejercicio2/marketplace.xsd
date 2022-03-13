@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="marketplace">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empresa" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="razonSocial" type="razonSocial" />
+                            <xs:element name="CIF" type="cif" />
+                            <xs:element name="telefono1" type="xs:string" />
+                            <xs:element name="telefono2" maxOccurs="unbounded"></xs:element>
+                            <xs:element name="datosDomicilio">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="direccion" type="textoCorto" />
+                                        <xs:element name="poblacion" type="textoCorto" />
+                                        <xs:element name="provincia" type="textoCorto" />
+                                        <xs:element name="pais" type="textoCorto" />
+                                        <xs:element name="codigoPostal" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="cliente" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="textoCorto" />
+                                        <xs:element name="apellidos" type="textoCorto" />
+                                        <xs:element name="DNI" type="dni" />
+                                        <xs:element name="telefono1" type="textoCorto" />
+                                        <xs:element name="telefono2" maxOccurs="unbounded" />
+                                        <xs:element name="datosFacturacion">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="direccion" type="textoCorto" />
+                                                    <xs:element name="poblacion" type="textoCorto" />
+                                                    <xs:element name="provincia" type="textoCorto" />
+                                                    <xs:element name="pais" type="textoCorto" />
+                                                    <xs:element name="codigoPostal" type="textoCorto" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="pedido" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="fecha" type="fecha" />
+                                                    <xs:element name="descripcion" type="descripcion" />
+                                                    <xs:element name="datosDomicilioEnvio" type="textoCorto" />
+                                                </xs:sequence>
+                                                <xs:attribute name="idPedido" type="id" use="required" />
+                                                <xs:attribute name="estado" type="tipoEstado" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="clienteID" type="id" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="id" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!-- Creacion de Elmentos Simples -->
+    <xs:simpleType name="razonSocial">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Sociedad Limitada"></xs:enumeration>
+            <xs:enumeration value="Sociedad Anonima"></xs:enumeration>
+            <xs:enumeration value="Sociedad Colectiva"></xs:enumeration>
+            <xs:enumeration value="Sociedad de Bienes"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="dni">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="[0-9]{8}[A-Z]{1}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="cif">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="[A-Z]{1}[0-9]{8}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="textoCorto">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="30" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="descripcion">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="tipoEstado">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Entregrado"></xs:enumeration>
+            <xs:enumeration value="En proceso"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="id">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="5" />
+            <xs:maxLength value="5" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="fecha">
+        <xs:restriction base="xs:date">
+            <xs:minInclusive value="2022-01-01" />
+            <xs:maxInclusive value="2022-12-31" />
+            <xs:pattern value=".{10}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+</xs:schema>
