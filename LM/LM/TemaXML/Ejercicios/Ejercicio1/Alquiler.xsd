@@ -14,7 +14,7 @@
                                     <xs:sequence>
                                         <xs:element name="marca" type="xs:string" />
                                         <xs:element name="modelo" type="xs:string" />
-                                        <xs:element name="matricuala" type="xs:string" />
+                                        <xs:element name="matricula" type="matricula" />
                                     </xs:sequence>
                                     <xs:attribute name="id" type="conductorID" use="required" />
                                 </xs:complexType>
@@ -25,8 +25,8 @@
                                     <xs:sequence>
                                         <xs:element name="fechaInicio" type="xs:date" />
                                         <xs:element name="fechaFin" type="xs:date" />
-                                        <xs:element name="precioBase" type="xs:double" />
-                                        <xs:element name="IVA" type="xs:double" />
+                                        <xs:element name="precioBase" type="xs:decimal" />
+                                        <xs:element name="IVA" type="xs:decimal" />
                                         <xs:element name="formaPago" type="formaPago" />
                                         <xs:element name="totalAdeudado" type="xs:decimal" />
                                     </xs:sequence>
@@ -92,7 +92,19 @@
         <xs:restriction base="xs:string">
             <xs:enumeration value="Efectivo"></xs:enumeration>
             <xs:enumeration value="Tarjeta"></xs:enumeration>
-            <xs:enumeration value="Transferencia"></xs:enumeration>
+            <xs:enumeration value="Paypal"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="decimal">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"></xs:fractionDigits>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="matricula">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="[1-9]{2}[A-Z]{2}[1-9]{2}"></xs:pattern>
         </xs:restriction>
     </xs:simpleType>
 
