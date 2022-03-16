@@ -6,13 +6,13 @@
             <body>
                 <h1>Listado de personas</h1>
                 <table border="1">
+
                     <tr>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Edad</th>
                     </tr>
 
-
                     <xsl:for-each select="personas">
 
                         <tr>
@@ -28,20 +28,6 @@
                         </tr>
                     </xsl:for-each>
 
-                    <xsl:for-each select="personas">
-
-                        <tr>
-                            <td>
-                                <xsl:value-of select="nombre"></xsl:value-of>
-                            </td>
-                            <td>
-                                <xsl:value-of select="apellido"></xsl:value-of>
-                            </td>
-                            <td>
-                                <xsl:value-of select="edad"></xsl:value-of>
-                            </td>
-                        </tr>
-                    </xsl:for-each>
 
                 </table>
 
