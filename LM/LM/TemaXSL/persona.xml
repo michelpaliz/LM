@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="persona.xsl" type="text/xsl"?>
+<?xml-model href="persona.dtd" type="application/xml-dtd"?>
+
+<!DOCTYPE persona SYSTEM "persona.dtd">
+<personas>
+    <persona>
+        <nombre>Michael</nombre>
+        <apellido>Paliz</apellido>
+        <edad>21</edad>
+    </persona>
+    <persona>
+        <nombre>Juan</nombre>
+        <apellido>Sanchez</apellido>
+        <edad>25</edad>
+    </persona>
+
+
+</personas>
