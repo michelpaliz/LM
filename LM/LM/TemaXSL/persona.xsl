@@ -14,18 +14,38 @@
                     </tr>
 
                     <xsl:for-each select="personas">
+                        <xsl:for-each select="//persona">
+                            <tr>
+                                <td>
+                                    <xsl:value-of select="nombre"></xsl:value-of>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="apellido"></xsl:value-of>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="edad"></xsl:value-of>
+                                </td>
+                            </tr>
+                        </xsl:for-each>
 
-                        <tr>
-                            <td>
-                                <xsl:value-of select="nombre"></xsl:value-of>
-                            </td>
-                            <td>
-                                <xsl:value-of select="apellido"></xsl:value-of>
-                            </td>
-                            <td>
-                                <xsl:value-of select="edad"></xsl:value-of>
-                            </td>
-                        </tr>
+                    </xsl:for-each>
+
+
+                    <xsl:for-each select="personas">
+                        <xsl:for-each select="persona">
+                            <tr>
+                                <td>
+                                    <xsl:value-of select="nombre"></xsl:value-of>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="apellido"></xsl:value-of>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="edad"></xsl:value-of>
+                                </td>
+                            </tr>
+                        </xsl:for-each>
+
                     </xsl:for-each>
 
 
