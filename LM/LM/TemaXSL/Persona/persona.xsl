@@ -13,7 +13,7 @@
                         <th>Edad</th>
                     </tr>
 
-                    <!-- <xsl:for-each select="personas">
+                    <xsl:for-each select="personas">
                         <xsl:for-each select="//persona">
                             <tr>
                                 <td>
@@ -46,14 +46,12 @@
                             </tr>
                         </xsl:for-each>
 
-                    </xsl:for-each> -->
+                    </xsl:for-each>
 
 
                 </table>
 
-                <xsl:template match="edad"></xsl:template>
-                <xsl:template match="/"></xsl:template>
-                Prueba
+
             </body>
 
 
