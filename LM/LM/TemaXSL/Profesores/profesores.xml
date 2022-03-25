@@ -4,13 +4,13 @@
 <clase>
     <profesores>
         <profesor>
-            <nombre>Michael</nombre>
-            <apellido>Paliz</apellido>
+            <nombre>Profesor nombre 1</nombre>
+            <apellido>Profesor apellido 1</apellido>
         </profesor>
 
         <profesor>
-            <nombre>Juan</nombre>
-            <apellido>Parra</apellido>
+            <nombre>Profesor nombre  2</nombre>
+            <apellido>Profersor apellido 2</apellido>
         </profesor>
 
     </profesores>
