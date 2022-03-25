@@ -3,9 +3,21 @@
     <xsl:output method="text"></xsl:output>
 
 
+    <xsl:template match="/">
+        Alumnos
+        -------------
+        <xsl:value-of select="*/*/alumno"></xsl:value-of>
+        Profesores
+        ---------------
+        <xsl:apply-templates select="*/*/profesor"></xsl:apply-templates>
+        <!-- para que salgan los apellidos -->
+        <xsl:apply-templates match=""></xsl:apply-templates>
+
+    </xsl:template>
+
 
     <!-- HTML -->
-    <xsl:template match="/">
+    <!-- <xsl:template match="/">
         <html>
             <body>
                 <header>
@@ -18,9 +30,7 @@
             </body>
 
         </html>
-    </xsl:template>
+    </xsl:template> -->
 
-
- 
 
 </xsl:stylesheet>

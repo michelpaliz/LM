@@ -16,12 +16,12 @@
     </profesores>
     <alumnos>
         <alumno>
-            <nombre> Antonio</nombre>
-            <apellido>Garcia</apellido>
+            <nombre> Alumno nombre 1</nombre>
+            <apellido>Alumno apellido 1</apellido>
         </alumno>
         <alumno>
-            <nombre>Luis</nombre>
-            <apellido>Diaz</apellido>
+            <nombre>Alumno nombre 2</nombre>
+            <apellido>Alumno apellido 2</apellido>
         </alumno>
     </alumnos>
 
