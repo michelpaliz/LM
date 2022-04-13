@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="curso">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="alumnos" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="alumno" type="tAlumno" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="profesores" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="profesor" type="tDatosPersonales" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- * Tipos opcionales pero que mejoran la organización -->
+
+    <!-- ======================================== -->
+    <!--  Definiciones de tipos simples           -->
+    <!-- ======================================== -->
+
+    <!-- ======== Tipo "tTextoCorto" ============ -->
+    <xs:simpleType name="tTextoCorto">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ===== Tipo "tMetodoIngreso" * ========== -->
+    <xs:simpleType name="tMetodoIngreso">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Bachillerato" />
+            <xs:enumeration value="CFGM" />
+            <xs:enumeration value="Otro" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ========= Tipo "tNota" * ============== -->
+    <xs:simpleType name="tNota">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="10" />
+            <xs:totalDigits value="3" />
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ======================================== -->
+    <!--  Definiciones de tipos complejos         -->
+    <!-- ======================================== -->
+
+    <!-- ======= Tipo "tDatosPersonales" ======== -->
+    <xs:complexType name="tDatosPersonales">
+        <xs:sequence>
+            <xs:element name="nombre" type="tTextoCorto" />
+            <xs:element name="apellido" type="tTextoCorto" maxOccurs="2" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ======== Tipo "tAlumno" * ============ -->
+    <xs:complexType name="tAlumno">
+        <xs:sequence>
+            <xs:element name="datosPersonales" type="tDatosPersonales" />
+            <xs:element name="metodoIngreso" type="tMetodoIngreso" />
+            <xs:element name="evaluacion" minOccurs="0">
+                <xs:complexType>
+                    <xs:attribute name="nota" type="tNota" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="repetidor" type="xs:boolean" default="false" />
+    </xs:complexType>
+
+</xs:schema>

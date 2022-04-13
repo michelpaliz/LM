@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE factura SYSTEM "facturaDTD.dtd">
+<factura numero="15" fecha="07/02/2022">
+    <datosEmpresa>
+        <nombre>MediaMarkt</nombre>
+        <direccion>Finestrat</direccion>
+        <telefono>900205000</telefono>
+    </datosEmpresa>
+    <datosCliente>
+        <nombre>Ada Lovelace</nombre>
+        <direccion>IES La Mar</direccion>
+        <telefono>966428205</telefono>
+    </datosCliente>
+    <lineas>
+        <linea codArt="IMP001">
+            <tipo>Periférico</tipo>
+            <descripcion>Impresora</descripcion>
+            <cantidad>1</cantidad>
+            <precio>120.25</precio>
+        </linea>
+        <linea codArt="ORD001" oferta="true">
+            <tipo>Hardware</tipo>
+            <descripcion>Ordenador</descripcion>
+            <cantidad>2</cantidad>
+            <precio>600</precio>
+        </linea>
+    </lineas>
+    <importe>1320.25</importe>
+</factura>

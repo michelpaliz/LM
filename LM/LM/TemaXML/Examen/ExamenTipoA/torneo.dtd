@@ -1,0 +1,20 @@
+<!ELEMENT torneo (jueces?, jugadores?, partidos?)>
+<!ATTLIST torneo
+            nombre NMTOKENS #REQUIRED
+            anyo NMTOKEN #REQUIRED
+            modalidad NMTOKENS #REQUIRED>
+<!ELEMENT jueces (juez)*>
+<!ELEMENT juez (#PCDATA)>
+<!ATTLIST juez 
+            codigo ID #REQUIRED
+            nacionalidad NMTOKEN #REQUIRED>
+<!ELEMENT jugadores (jugador)*>
+<!ELEMENT jugador (#PCDATA)>
+<!ATTLIST jugador codigo ID #REQUIRED>
+<!ELEMENT partidos (partido)*>
+<!ELEMENT partido (resultado?)>
+<!ATTLIST partido
+            ronda NMTOKENS #REQUIRED
+            fecha CDATA #IMPLIED
+            componentes IDREFS #REQUIRED>
+<!ELEMENT resultado (#PCDATA)>

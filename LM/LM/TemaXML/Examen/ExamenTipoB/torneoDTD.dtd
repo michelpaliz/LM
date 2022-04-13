@@ -1,0 +1,24 @@
+<!ELEMENT torneo (jueces?,jugadores?,partidos?)>
+<!ATTLIST torneo nombre NMTOKENS #REQUIRED>
+<!ATTLIST torneo anyo NMTOKEN #REQUIRED>
+<!ATTLIST torneo modalidad NMTOKENS #REQUIRED>
+<!ELEMENT jueces (juez+)>
+<!ELEMENT juez (#PCDATA)>
+<!ATTLIST juez codigo ID #REQUIRED>
+<!-- Para incluir países con un espacio en su nombre -->
+<!ATTLIST juez nacionalidad NMTOKENS #REQUIRED>
+<!ELEMENT jugadores (jugador+)>
+<!ELEMENT jugador (#PCDATA)>
+<!ATTLIST jugador codigo ID #REQUIRED>
+<!ELEMENT partidos (partido+)>
+<!ELEMENT partido (resultado?)>
+<!-- Aún no se nombra los "Cuartos de final"
+     así que NMTOKEN se daría como válido -->
+<!ATTLIST partido ronda NMTOKENS #REQUIRED>
+<!ATTLIST partido fecha CDATA #REQUIRED>
+<!ATTLIST partido jugadores IDREFS #REQUIRED>
+<!ATTLIST partido juez IDREF #REQUIRED>
+<!ELEMENT resultado (set+)>
+<!ELEMENT set (#PCDATA)>
+<!ATTLIST set numero NMTOKEN #REQUIRED>
+<!ATTLIST set tiebreak NMTOKEN "no">

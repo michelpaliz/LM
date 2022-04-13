@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="curso.xsd">
+    <alumnos>
+        <alumno>
+            <datosPersonales>
+                <nombre>Ada</nombre>
+                <apellido>Lovelace</apellido>
+            </datosPersonales>
+            <metodoIngreso>Bachillerato</metodoIngreso>
+            <evaluacion nota="9.75" />
+        </alumno>
+        <alumno repetidor="true">
+            <datosPersonales>
+                <nombre>Ángela</nombre>
+                <apellido>Ruiz</apellido>
+                <apellido>Robles</apellido>
+            </datosPersonales>
+            <metodoIngreso>CFGM</metodoIngreso>
+            <evaluacion nota="5" />
+        </alumno>
+    </alumnos>
+    <profesores>
+        <profesor>
+            <nombre>Rubén</nombre>
+            <apellido>Parra</apellido>
+            <apellido>Savall</apellido>
+        </profesor>
+    </profesores>
+</curso>

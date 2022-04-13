@@ -1,0 +1,19 @@
+<!ELEMENT factura (datosEmpresa, datosCliente, lineas, importe)>
+    <!ATTLIST factura
+                    numero NMTOKEN #REQUIRED
+                    fecha CDATA #REQUIRED>
+    <!ELEMENT datosEmpresa (nombre, direccion, telefono)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT direccion (#PCDATA)>
+        <!ELEMENT telefono (#PCDATA)>
+    <!ELEMENT datosCliente (nombre, direccion, telefono)>
+    <!ELEMENT lineas (linea)+>
+        <!ELEMENT linea (tipo, descripcion, cantidad, precio)>
+            <!ATTLIST linea
+                        codArt ID #REQUIRED
+                        oferta (false|true) "false">
+            <!ELEMENT tipo (#PCDATA)>
+            <!ELEMENT descripcion (#PCDATA)>
+            <!ELEMENT cantidad (#PCDATA)>
+            <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT importe (#PCDATA)>

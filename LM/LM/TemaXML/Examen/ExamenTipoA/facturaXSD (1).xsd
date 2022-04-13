@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="factura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="datosEmpresa" type="tDatosGenerales" />
+                <xs:element name="datosCliente" type="tDatosGenerales" />
+                <xs:element name="lineas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="linea" maxOccurs="15">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tipo" type="tProducto" />
+                                        <xs:element name="descripcion" type="tTextoDescripcion" />
+                                        <xs:element name="cantidad" type="xs:string" />
+                                        <xs:element name="precio" type="tDosDecimales" />
+                                    </xs:sequence>
+                                    <xs:attribute name="codArt" type="tCodigo" use="required" />
+                                    <xs:attribute name="oferta" type="xs:boolean" default="false" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="importe" type="tDosDecimales" />
+            </xs:sequence>
+            <xs:attribute name="numero" type="xs:integer" use="required" />
+            <xs:attribute name="fecha" type="xs:date" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ======================================== -->
+    <!--  Definiciones de tipos simples           -->
+    <!-- ======================================== -->
+
+    <!-- ======== Tipo "tTextoDescripcion" ============ -->
+    <xs:simpleType name="tTextoDescripcion">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="100" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ======== Tipo "tCodigo" ============ -->
+    <xs:simpleType name="tCodigo">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="4" />
+            <xs:maxLength value="8" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ======== Tipo "tProducto" ============ -->
+    <xs:simpleType name="tProducto">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Periférico" />
+            <xs:enumeration value="Hardware" />
+            <xs:enumeration value="Software" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ======== Tipo "tDosDecimales" ============ -->
+    <xs:simpleType name="tDosDecimales">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ======================================== -->
+    <!--  Definiciones de tipos complejos         -->
+    <!-- ======================================== -->
+
+    <!-- ======= Tipo "tDatosGenerales" ======== -->
+    <xs:complexType name="tDatosGenerales">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="direccion" type="xs:string" />
+            <xs:element name="telefono" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
