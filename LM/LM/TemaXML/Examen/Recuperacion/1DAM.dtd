@@ -1,0 +1,14 @@
+<!ELEMENT curso (alumnos,profesores)>
+<!ATTLIST curso anyo NMTOKEN #REQUIRED>
+<!ATTLIST curso ciclo NMTOKEN #REQUIRED>
+<!ATTLIST curso familia NMTOKEN #REQUIRED>
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno (nombre+,apellido+,metodoIngreso,evaluacion+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT metodoIngreso (#PCDATA)>
+<!ELEMENT evaluacion EMPTY>
+<!ATTLIST evaluacion nota NMTOKEN #REQUIRED>
+<!ELEMENT profesores (profesor+) >
+<!ELEMENT profesor (nombre,apellido+)>
+<!ATTLIST profesor tutor NMTOKEN #IMPLIED>

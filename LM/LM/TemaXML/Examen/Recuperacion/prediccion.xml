@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="prediccion.xsd"?>
+<predicciones>
+    <prediccion cp="03730">
+        <dia fecha="2022-04-11">
+            <descripcion>Cubierto</descripcion>
+            <probabilidad>0</probabilidad>
+            <cotaNieve></cotaNieve>
+            <viento>
+                <rachaMaxima>50</rachaMaxima>
+                <direccion>N</direccion>
+                <velocidad>35</velocidad>
+            </viento>
+            <temperatura>
+                <minima>10</minima>
+                <maxima>20</maxima>
+            </temperatura>
+        </dia>
+
+        <dia fecha="2022-04-12">
+            <descripcion>Niebla</descripcion>
+            <probabilidad>50</probabilidad>
+            <cotaNieve></cotaNieve>
+            <viento>
+                <rachaMaxima></rachaMaxima>
+                <direccion>O</direccion>
+                <velocidad>10</velocidad>
+            </viento>
+            <temperatura>
+                <minima>11</minima>
+                <maxima>21</maxima>
+            </temperatura>
+        </dia>
+
+        <dia fecha="2022-04-13">
+            <descripcion>Muy nuboso con lluvia</descripcion>
+            <probabilidad>100</probabilidad>
+            <cotaNieve>1500</cotaNieve>
+            <viento>
+                <rachaMaxima>35</rachaMaxima>
+                <direccion>E</direccion>
+                <velocidad>20</velocidad>
+            </viento>
+            <temperatura>
+                <minima>9</minima>
+                <maxima>19</maxima>
+            </temperatura>
+        </dia>
+
+
+    </prediccion>
+
+
+</predicciones>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- root -->
+    <xs:element name="predicciones">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="prediccion">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dia" type="Tdia" maxOccurs="7"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="cp" type="cp"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+
+    <!-- Generacion de tipos Simples -->
+    <xs:simpleType name="cp">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="5"></xs:minLength>
+            <xs:maxLength value="5"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="textoLargo">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"></xs:minLength>
+            <xs:maxLength value="100"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="precipitacion">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"></xs:minInclusive>
+            <xs:maxInclusive value="100"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="temperatura">
+        <xs:restriction base="xs:integer">
+            <xs:totalDigits value="2"></xs:totalDigits>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="direccion">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="N"></xs:enumeration>
+            <xs:enumeration value="E"></xs:enumeration>
+            <xs:enumeration value="S"></xs:enumeration>
+            <xs:enumeration value="O"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="rachaMaxima">
+        <xs:restriction base="xs:integer">
+            <!-- <xs:minInclusive value="0"></xs:minInclusive> -->
+            <!-- <xs:maxInclusive value="999"></xs:maxInclusive>  -->
+            <xs:totalDigits value="3"></xs:totalDigits>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 
+    <xs:simpleType name="rachaMaxima">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"></xs:minInclusive>
+            <xs:pattern value="\d{3}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType> -->
+
+
+    <!-- Genereacion de complexType -->
+
+    <xs:complexType name="Tdia">
+        <xs:sequence>
+            <xs:element name="descripcion" type="textoLargo"></xs:element>
+            <xs:element name="probabilidad" type="precipitacion"></xs:element>
+            <xs:element name="cotaNieve" type="xs:string"></xs:element>
+            <xs:element name="viento" type="Tviento"></xs:element>
+            <xs:element name="temperatura" type="Ttemperatura"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="fecha" type="xs:date" use="required"></xs:attribute>
+    </xs:complexType>
+
+
+    <xs:complexType name="Tviento">
+        <xs:sequence>
+            <xs:element name="rachaMaxima" type="rachaMaxima"></xs:element>
+            <xs:element name="direccion" type="direccion"></xs:element>
+            <xs:element name="velocidad" type="rachaMaxima"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Ttemperatura">
+        <xs:sequence>
+            <xs:element name="minima"></xs:element>
+            <xs:element name="maxima"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>

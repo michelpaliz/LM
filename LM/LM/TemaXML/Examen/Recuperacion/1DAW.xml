@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="1DAW.dtd" type="application/xml-dtd"?>
+<curso anyo="1" ciclo="DAW" familia="Informática">
+    <alumnos>
+        <alumno>
+            <nombre>Ada</nombre>
+            <apellido>Lovelace</apellido>
+            <metodoIngreso>Bachillerato</metodoIngreso>
+            <evaluacion nota="9.75" />
+        </alumno>
+        <alumno>
+            <nombre>Félix</nombre>
+            <apellido>Rodríguez</apellido>
+            <apellido>de la Fuente</apellido>
+            <metodoIngreso>CFGM</metodoIngreso>
+        </alumno>
+    </alumnos>
+    <profesores>
+        <profesor>
+            <nombre>Rubén</nombre>
+            <apellido>Parra</apellido>
+            <apellido>Savall</apellido>
+        </profesor>
+        <profesor tutor="true">
+            <nombre>Juanjo</nombre>
+            <apellido>Pedraza</apellido>
+        </profesor>
+    </profesores>
+</curso>

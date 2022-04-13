@@ -1,0 +1,5 @@
+<!ELEMENT curso (alumnos)>
+<!ATTLIST curso anyo NMTOKEN #REQUIRED>
+<!ATTLIST curso ciclo NMTOKEN #REQUIRED>
+<!ATTLIST curso familia NMTOKEN #REQUIRED>
+<!ELEMENT alumnos EMPTY>

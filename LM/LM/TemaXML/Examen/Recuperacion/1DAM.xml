@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="1DAM.dtd" type="application/xml-dtd"?>
+<curso anyo="1" ciclo="DAM" familia="Informática">
+    <alumnos>
+        <alumno>
+            <nombre>Jaime</nombre>
+            <apellido>Gómez-Obregón</apellido>
+            <metodoIngreso>Bachillerato</metodoIngreso>
+            <evaluacion nota="5" />
+        </alumno>
+    </alumnos>
+    <profesores>
+        <profesor tutor="true">
+            <nombre>Rubén</nombre>
+            <apellido>Parra</apellido>
+            <apellido>Savall</apellido>
+        </profesor>
+        <profesor>
+            <nombre>Juanjo</nombre>
+            <apellido>Pedraza</apellido>
+        </profesor>
+    </profesores>
+</curso>
