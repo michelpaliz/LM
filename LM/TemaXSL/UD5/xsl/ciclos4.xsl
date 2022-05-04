@@ -21,13 +21,16 @@
 
                 <ul>
                     <xsl:for-each select="*/ciclo">
-                        <xsl:if test="grado = 'Superior' ">
-                            <li>
-                                <u>
-                                    <xsl:value-of select="@codigo" />
-                                </u>
-                            </li>
-                        </xsl:if>
+                        <xsl:choose>
+                            <xsl:when test="@codigo = 'SMR'" />
+                            <xsl:otherwise>
+                                <li>
+                                    <u>
+                                        <xsl:value-of select="@codigo"></xsl:value-of>
+                                    </u>
+                                </li>
+                            </xsl:otherwise>
+                        </xsl:choose>
 
                     </xsl:for-each>
                 </ul>
