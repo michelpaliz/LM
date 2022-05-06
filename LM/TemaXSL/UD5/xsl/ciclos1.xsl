@@ -32,9 +32,10 @@
 
 
         <xsl:template match="ciclo">
-            <br>
+            <p>
                 <xsl:value-of select="nombre" />
-            </br>
+                <br />
+            </p>
         </xsl:template>
 
 

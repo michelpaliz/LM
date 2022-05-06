@@ -16,7 +16,17 @@ xhttp.send();
 
 function showResult(xml) {
     var txt = "";
-    path = "/vivero/especie/precio"
+    // path = "/vivero/especie/precio"
+    //path = "/vivero/especie[nombre= 'Litchi']/precio"
+    // path = "/vivero/especie[precio>9]/otros_datos/maduracion"
+  // path = "/vivero/especie [nombre = 'Litchi'] and [precio>9] /otros_datos/maduracion";
+  //path = "/vivero/especie [precio>9]/precio";
+    path = "//especie [nombre = 'Litchi' and precio > 9]/otros_datos/maduracion"
+    // path = "/vivero/especie[@siembra = '2018']/origen";
+    //path = "//especie[@siembra = '2018']/origen";
+    // path = "/vivero/especie/color_fruto";
+    // path = "/vivero/especie[position()<3]/color_fruto";
+
         var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
         var result = nodes.iterateNext();
         while (result) {
