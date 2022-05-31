@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="clase.xsl" type="text/xsl"?>
+
+<clase>
+    <profesores>
+        <profesor foto="captura.png">
+            <nombre>Rubén</nombre>
+            <apellido>Parra</apellido>
+        </profesor>
+        <profesor foto="feynman.png">
+            <nombre>Richard</nombre>
+            <apellido>Feynman</apellido>
+        </profesor>
+    </profesores>
+    <alumnos>
+        <alumno>
+            <nombre>Andrew</nombre>
+            <apellido>Tanenbaum</apellido>
+            <nota>4</nota>
+        </alumno>
+        <alumno>
+            <nombre>Tim</nombre>
+            <apellido>Berners-Lee</apellido>
+            <nota>7</nota>
+        </alumno>
+        <alumno>
+            <nombre>Ada</nombre>
+            <apellido>Lovelace</apellido>
+            <nota>9</nota>
+        </alumno>
+    </alumnos>
+</clase>
