@@ -47,38 +47,38 @@
 
                 <h1>Alumnos</h1>
 
-                <xsl:for-each select="*/*/alumno">
-                    <xsl:choose>
-                        <xsl:when test="nota &lt; 5">
-                            <ol>
+                <ol>
+                    <xsl:for-each select="*/*/alumno">
+                        <xsl:choose>
+                            <xsl:when test="nota &lt; 5">
                                 <li>
                                     <xsl:value-of select="apellido"></xsl:value-of>
                                     <xsl:value-of select="nombre"></xsl:value-of>
                                     (suspendido)
                                 </li>
-                            </ol>
-                        </xsl:when>
-                        <xsl:when test="nota  &gt; 8">
-                            <ol>
+                            </xsl:when>
+                            <xsl:when test="nota  &gt; 8">
+
                                 <li>
                                     <b>
                                         <xsl:value-of select="apellido"></xsl:value-of>
                                         <xsl:value-of select="nombre"></xsl:value-of>
                                     </b>
                                 </li>
-                            </ol>
-                        </xsl:when>
 
-                        <xsl:otherwise>
-                            <ol>
+                            </xsl:when>
+
+                            <xsl:otherwise>
+
                                 <li>
                                     <xsl:value-of select="apellido"></xsl:value-of>
                                     <xsl:value-of select="nombre"></xsl:value-of>
                                 </li>
-                            </ol>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:for-each>
+
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>
+                </ol>
 
                 <!-- <xsl:for-each select="*/*/alumno">
                     <xsl:choose>
