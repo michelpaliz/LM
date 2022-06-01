@@ -7,6 +7,10 @@
                 table, th, td{
                     border: 1px solid black;
                 }
+                table tr:first-child td{
+                    font-weight:bold;
+                    text-align: center;
+                }
                 img{
                     height:100px;
                 }
@@ -75,6 +79,34 @@
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:for-each>
+
+                <!-- <xsl:for-each select="*/*/alumno">
+                    <xsl:choose>
+                        <ol>
+                            <xsl:when test="nota &lt; 5">
+                                <li>
+                                    <xsl:value-of select="apellido"></xsl:value-of>
+                                    <xsl:value-of select="nombre"></xsl:value-of>
+                                    (suspendido)
+                                </li>
+                            </xsl:when>
+                            <xsl:when test="nota  &gt; 8">
+                                <li>
+                                    <b>
+                                        <xsl:value-of select="apellido"></xsl:value-of>
+                                        <xsl:value-of select="nombre"></xsl:value-of>
+                                    </b>
+                                </li>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <li>
+                                    <xsl:value-of select="apellido"></xsl:value-of>
+                                    <xsl:value-of select="nombre"></xsl:value-of>
+                                </li>
+                            </xsl:otherwise>
+                        </ol>
+                    </xsl:choose>
+                </xsl:for-each> -->
 
                 <!-- 
                 <xsl:for-each select="*/*/alumno">
