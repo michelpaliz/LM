@@ -53,6 +53,7 @@
                             <xsl:when test="nota &lt; 5">
                                 <li>
                                     <xsl:value-of select="apellido"></xsl:value-of>
+                                    ,
                                     <xsl:value-of select="nombre"></xsl:value-of>
                                     (suspendido)
                                 </li>
@@ -62,6 +63,7 @@
                                 <li>
                                     <b>
                                         <xsl:value-of select="apellido"></xsl:value-of>
+                                        ,
                                         <xsl:value-of select="nombre"></xsl:value-of>
                                     </b>
                                 </li>
@@ -72,6 +74,7 @@
 
                                 <li>
                                     <xsl:value-of select="apellido"></xsl:value-of>
+                                    ,
                                     <xsl:value-of select="nombre"></xsl:value-of>
                                 </li>
 
