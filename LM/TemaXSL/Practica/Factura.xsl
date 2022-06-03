@@ -15,16 +15,43 @@
 
                 <h1>Facturas</h1>
                 <table>
+                    <!-- encabezado -->
                     <tr>
-                        <th>Datos de la empresa</th>
+                        <th>Trimestre </th>
+                        <th>Factura</th>
+                        <th> Datos de la empresa </th>
                     </tr>
-                    <xsl:value-of select="//datosEmpresa">
-                        <tr>
+                    <!-- fin encabezado -->
+                    <tr>
+                        <td>
+                            <xsl:for-each select="/">
+                                <xsl:value-of select="facturas/@trimestre "></xsl:value-of>
+                            </xsl:for-each>
+                        </td>
+                        <td>
+                            <xsl:for-each select="/">
+                                <xsl:value-of select="facturas/factura/@numero"></xsl:value-of>
+                            </xsl:for-each>
+
+                        </td>
+                        <xsl:for-each select="//datosEmpresa">
                             <td>
-                                <xsl:value-of select="nombre"></xsl:value-of>
+                                <td>Nombre de la empresa</td>
+                                <td>
+                                    <xsl:value-of select="nombre"></xsl:value-of>
+                                </td>
                             </td>
-                        </tr>
-                    </xsl:value-of>
+
+                            <td>
+                                <td>Direccion</td>
+                                <td>
+                                    <xsl:value-of select="direccion"></xsl:value-of>
+                                </td>
+                            </td>
+
+                        </xsl:for-each>
+                    </tr>
+
                 </table>
 
             </body>
