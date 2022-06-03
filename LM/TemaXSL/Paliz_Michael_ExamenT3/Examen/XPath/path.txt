@@ -1,0 +1,5 @@
+1.//camion/precio
+2.//coche[marca = "SEAT"] | //moto[marca = "SEAT"] | //camiones[marca = "SEAT"] 
+3.//coche [@etiqueta  = "Eco"]  |  concesionario/coches/coche[precio < 30000]
+4.//coche [marca = "BMW"] | concesionario/coches/coche[@etiqueta = "Cero"] | //moto[@etiqueta = "Cero"]  |  //moto[@marca= "BMW"] 
+5.//motos[position() < 3]

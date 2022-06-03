@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="trans.xsl" type="text/xsl"?>
+<centro nombre="EP Springfield">
+    <curso nivel="Segundo Grado">
+        <alumnos>
+            <alumno acneae="1">
+                <nombre>Ralph</nombre>
+                <apellido>Wiggum</apellido>
+                <foto>ralph.png</foto>
+            </alumno>
+            <alumno acneae="2">
+                <nombre>Lisa</nombre>
+                <apellido>Simpson</apellido>
+                <foto>lisa.png</foto>
+            </alumno>
+        </alumnos>
+        <profesores>
+            <profesor>
+                <nombre>Elizabeth</nombre>
+                <apellido>Hoover</apellido>
+            </profesor>
+        </profesores>
+    </curso>
+</centro>

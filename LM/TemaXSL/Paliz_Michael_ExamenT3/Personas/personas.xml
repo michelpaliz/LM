@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="personas.xsl" type="text/xsl"?>
+<!-- fecha 23/03/2022 -->
+<personas>
+    <persona>
+        <nombre>Michael</nombre>
+        <apellido>Paliz</apellido>
+        <edad>21</edad>
+    </persona>
+    <persona>
+        <nombre>Michael</nombre>
+        <apellido>Paliz</apellido>
+        <edad>21</edad>
+    </persona>
+</personas>

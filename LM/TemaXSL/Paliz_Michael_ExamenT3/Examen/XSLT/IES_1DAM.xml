@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="trans.xsl" type="text/xsl"?>
+<centro nombre="IES La Mar">
+    <curso nivel="1DAM">
+        <alumnos>
+            <alumno acneae="2">
+                <nombre>Richard</nombre>
+                <apellido>Feynman</apellido>
+                <foto>feynman.png</foto>
+            </alumno>
+            <alumno acneae="0">
+                <nombre>Mark</nombre>
+                <apellido>Zuckerberg</apellido>
+                <foto>mark.png</foto>
+            </alumno>
+            <alumno acneae="2">
+                <nombre>Ada</nombre>
+                <apellido>Lovelace</apellido>
+                <foto>ada.png</foto>
+            </alumno>
+        </alumnos>
+        <profesores>
+            <profesor>
+                <nombre>Rubén</nombre>
+                <apellido>Parra</apellido>
+            </profesor>
+            <profesor>
+                <nombre>Germán</nombre>
+                <apellido>Gascón</apellido>
+            </profesor>
+        </profesores>
+    </curso>
+</centro>

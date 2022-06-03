@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="profesores.xsl" type="text/xsl"?>
+<!-- fecha 23/03/2022 -->
+<clase>
+    <profesores>
+        <profesor>
+            <nombre>Profesor nombre 1</nombre>
+            <apellido>Profesor apellido 1</apellido>
+            <nota>8</nota>
+        </profesor>
+
+        <profesor>
+            <nombre>Profesor nombre  2</nombre>
+            <apellido>Profersor apellido 2</apellido>
+            <nota>5</nota>
+        </profesor>
+
+    </profesores>
+    <alumnos>
+        <alumno>
+            <nombre> Alumno nombre 1</nombre>
+            <apellido>Alumno apellido 1</apellido>
+            <edad>21</edad>
+        </alumno>
+        <alumno>
+            <nombre>Alumno nombre 2</nombre>
+            <apellido>Alumno apellido 2</apellido>
+            <edad>25</edad>
+        </alumno>
+    </alumnos>
+
+
+</clase>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concesionario>
+    <coches>
+        <coche etiqueta="Eco">
+            <marca>Opel</marca>
+            <modelo>Corsa</modelo>
+            <precio>15000</precio>
+        </coche>
+        <coche etiqueta="Cero">
+            <marca>BMW</marca>
+            <modelo>i3</modelo>
+            <precio>40000</precio>
+        </coche>
+        <coche etiqueta="Cero">
+            <marca>BMW</marca>
+            <modelo>i4</modelo>
+            <precio>60000</precio>
+        </coche>
+        <coche etiqueta="Eco">
+            <marca>BMW</marca>
+            <modelo>X1</modelo>
+            <precio>35000</precio>
+        </coche>
+        <coche etiqueta="C">
+            <marca>SEAT</marca>
+            <modelo>Ibiza</modelo>
+            <precio>15000</precio>
+        </coche>
+    </coches>
+    <motos>
+        <moto etiqueta="Cero">
+            <marca>SEAT</marca>
+            <modelo>Mó</modelo>
+            <precio>4000</precio>
+        </moto>
+        <moto etiqueta="C">
+            <marca>Piaggio</marca>
+            <modelo>Liberty</modelo>
+            <precio>2500</precio>
+        </moto>
+        <moto etiqueta="C">
+            <marca>Derbi</marca>
+            <modelo>Variant</modelo>
+            <precio>2000</precio>
+        </moto>
+    </motos>
+    <camiones>
+        <camion>
+            <marca>Volvo</marca>
+            <modelo>FH</modelo>
+            <precio>50000</precio>
+        </camion>
+    </camiones>
+</concesionario>

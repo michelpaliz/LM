@@ -1,0 +1,28 @@
+1. Obtén el apellido de los profesores utilizando el eje /
+    /clase/profesores/profesor/apellido
+2. Obtén el apellido de los profesores utilizando el eje //
+    //apellido
+3. Obtén todos los nombres.
+    //nombre
+    /clase//nombre
+4. Obtén el nombre de los profesores y el apellido de los alumnos.
+    /clase/profesores//nombre | //alumno/nombre
+     //profesor/nombre | //alumno/nombre
+5. Obtén todos los profesores que tienen foto.
+    //profesor[@foto]
+    /clase/profesores/profesor[@foto]
+6. Obtén el último alumno.
+    //alumno[last()]
+7. Obtén el nombre del primer profesor.
+    //profesor[1]
+8. Obtén el nombre de los alumnos suspendidos.
+    //alumno[nota < 5 ]
+9. Obtén el nombre y el apellido de los alumnos aprobados.
+     //alumno[nota > 5 ]/nombre | //alumno[nota > 5]/ apellido
+10. Obtén el apellido de los alumnos aprobados de nombre “Ada”.
+      //alumno[nota > 5 and nombre = "Ada" ]
+11. Obtén las fotos de todos los profesores y todos los alumnos.
+     //@foto
+      /clase//@foto
+12. Obtén las notas de los dos primeros alumnos.
+        //alumno[position() < 3]/nota
